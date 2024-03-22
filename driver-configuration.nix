@@ -1,5 +1,10 @@
 { config, pkgs, ... }:
 {
+  # Enable and Setup the NVIDIA drivers.
+  services.xserver.videoDrivers = [
+    "nvidia"
+  ];
+
   # Setup hardware drivers
   hardware = {
     # ## Setup OpenGL ## #
@@ -9,11 +14,6 @@
       driSupport = true;
       driSupport32Bit = true;
     };
-
-    # ## Enable and Setup the NVIDIA drivers. ## #
-    services.xserver.videoDrivers = [
-      "nvidia"
-    ];
 
     nvidia = {
       # Modesetting for kernel, needed by wayland.
@@ -42,7 +42,7 @@
         allowExternalGpu = false;
 
         amdgpuBusId = "PCI:5:0:0";
-        nvidiaGpuId = "PCI:1:0:0";
+        nvidiaBusId = "PCI:1:0:0";
       };
     };
 
