@@ -2,9 +2,11 @@
 
 {
   imports = [
-      ./hardware-configuration.nix
-      ./driver-configuration.nix
-    ];
+    ./hardware-configuration.nix
+    ./driver-configuration.nix
+  ];
+
+  lyn.git-config.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -46,9 +48,9 @@
   services.xserver.desktopManager.plasma5.enable = true;
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us";
-    xkbVariant = "";
+    variant = "";
   };
 
   # Enable CUPS to print documents.
@@ -82,7 +84,11 @@
     packages = with pkgs; [
       firefox
       kate
+<<<<<<< HEAD:configuration.nix
     
+=======
+
+>>>>>>> a78436b2a9158f04bdcde8c2110c7ff4f643be84:configurations/wynux/default.nix
       hyfetch
       vscode
     ];
