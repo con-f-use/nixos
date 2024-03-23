@@ -3,10 +3,10 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./driver-configuration.nix
   ];
 
-  lyn.git-config.enable = true;
+  eve.git.enable = true;
+  eve.nvidia.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -84,11 +84,7 @@
     packages = with pkgs; [
       firefox
       kate
-<<<<<<< HEAD:configuration.nix
-    
-=======
 
->>>>>>> a78436b2a9158f04bdcde8c2110c7ff4f643be84:configurations/wynux/default.nix
       hyfetch
       vscode
     ];

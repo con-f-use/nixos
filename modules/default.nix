@@ -1,3 +1,4 @@
 {
-  git-config = import ./git-config;
+  git = import ./nixos/git.nix;
+  nvidia = import ./nixos/nvidia.nix;
 }
