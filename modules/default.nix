@@ -1,5 +1,5 @@
 {
-  # Defined modules. they go here.
+  # Defined modules. They go here.
 
   # ## System-Wide modules ## #
   git = import ./nixos/git.nix;
