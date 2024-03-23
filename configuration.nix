@@ -82,7 +82,9 @@
     packages = with pkgs; [
       firefox
       kate
-    #  thunderbird
+    
+      hyfetch
+      vscode
     ];
   };
 
