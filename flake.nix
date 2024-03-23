@@ -1,5 +1,5 @@
 {
-  description = "Eve's Configuration Flake. ";
+  description = "Eve's Configuration Flake";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
